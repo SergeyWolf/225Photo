@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		A51B872B2EE2E2AA0060F9DF /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A51B872A2EE2E2AA0060F9DF /* ApphudSDK */; };
 		A51F30C92EDD8EE900DAE6C5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A51F30C82EDD8EE900DAE6C5 /* Lottie */; };
+		A57E395B2EE807C80095A560 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = A57E39552EE807C80095A560 /* codemagic.yaml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A51DB8612ED43A4500D2BD28 /* 225 Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "225 Photo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57E39552EE807C80095A560 /* codemagic.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +41,7 @@
 		A51DB8582ED43A4500D2BD28 = {
 			isa = PBXGroup;
 			children = (
+				A57E39552EE807C80095A560 /* codemagic.yaml */,
 				A51DB8632ED43A4500D2BD28 /* 225 Photo */,
 				A51DB8622ED43A4500D2BD28 /* Products */,
 			);
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A57E395B2EE807C80095A560 /* codemagic.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
