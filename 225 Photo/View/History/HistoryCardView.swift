@@ -5,7 +5,7 @@
 //  Created by Сергей on 05.12.2025.
 //
 
-import SwiftUICore
+//import SwiftUICore
 import SwiftUI
 
 private let historyCellWidth: CGFloat = 116

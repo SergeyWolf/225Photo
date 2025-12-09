@@ -5,7 +5,7 @@
 //  Created by Сергей on 24.11.2025.
 //
 
-import SwiftUICore
+//import SwiftUICore
 import SwiftUI
 
 struct RateAlertOverlayView: View {
