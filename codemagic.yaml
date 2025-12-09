@@ -11,8 +11,8 @@ workflows:
         bundle_identifier: com.ole.225ph0t0
       vars:
         BUNDLE_ID: "com.ole.225ph0t0"
-        XCODE_PROJECT: "DreamRender Studio.xcodeproj"
-        XCODE_SCHEME: "DreamRender Studio"
+        XCODE_PROJECT: "225 Photo.xcodeproj"
+        XCODE_SCHEME: "225 Photo"
         APP_STORE_APPLE_ID: 6755883330
       xcode: latest # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
     scripts:
