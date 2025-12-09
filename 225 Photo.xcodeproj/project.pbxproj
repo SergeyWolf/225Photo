@@ -273,7 +273,6 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "-25-Photo-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Приложению нужен доступ к камере, чтобы вы могли делать фото и применять эффекты.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Приложению нужен доступ к фото, чтобы вы могли выбирать изображения для обработки.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -312,7 +311,6 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "-25-Photo-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Приложению нужен доступ к камере, чтобы вы могли делать фото и применять эффекты.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Приложению нужен доступ к фото, чтобы вы могли выбирать изображения для обработки.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
