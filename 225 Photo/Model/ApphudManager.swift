@@ -7,6 +7,7 @@
 
 import Foundation
 import ApphudSDK
+import StoreKit
 
 final class ApphudManager {
 
@@ -44,5 +45,40 @@ final class ApphudManager {
             }
         }
     }
+    
+    /// Вспомогательный метод для исправления отображения периода подписки
+    /// Если в Apphud приходит день, но по логике продукта это должна быть неделя - показываем "Weekly"
+    static func fixSubscriptionPeriodString(_ product: ApphudProduct?) -> String {
+        guard let skProduct = product?.skProduct,
+              let subscriptionPeriod = skProduct.subscriptionPeriod else {
+            return "Subscription"
+        }
+        
+        // Исправление: если период день, но по productId это недельная подписка
+        if subscriptionPeriod.unit == .day {
+            // Проверяем productId на наличие признаков недельной подписки
+            let productId = product?.productId.lowercased() ?? ""
+            if productId.contains("week") ||
+               productId.contains("weekly") ||
+               productId.contains("7day") ||
+               productId.contains("7_day") ||
+               subscriptionPeriod.numberOfUnits == 7 {
+                return "Weekly"
+            }
+        }
+        
+        // Стандартная логика
+        switch subscriptionPeriod.unit {
+        case .week:
+            return "Weekly"
+        case .month:
+            return "Monthly"
+        case .year:
+            return "Annual"
+        case .day:
+            return "Daily"
+        @unknown default:
+            return "Subscription"
+        }
+    }
 }
-

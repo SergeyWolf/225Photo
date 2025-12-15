@@ -303,16 +303,8 @@ struct SubscriptionPaywallView: View {
             formatter.locale = sk.priceLocale
             priceString = formatter.string(from: sk.price) ?? ""
 
-            if let s = sk.subscriptionPeriod {
-                switch s.unit {
-                case .week:  periodString = "Weekly"
-                case .month: periodString = "Monthly"
-                case .year:  periodString = "Annual"
-                case .day:   periodString = "Daily"
-                @unknown default:
-                    periodString = "Subscription"
-                }
-            }
+            // Используем исправленный метод для определения периода
+            periodString = ApphudManager.fixSubscriptionPeriodString(apphudProduct)
         }
 
         let title: String
