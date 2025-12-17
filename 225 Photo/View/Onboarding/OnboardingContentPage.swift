@@ -5,8 +5,8 @@
 //  Created by Сергей on 24.11.2025.
 //
 
-//import SwiftUICore
 import SwiftUI
+import AppTrackingTransparency
 
 struct OnboardingContentPage<Overlay: View>: View {
     let imageName: String
@@ -17,6 +17,7 @@ struct OnboardingContentPage<Overlay: View>: View {
     let nextActionTitle: String
     let onNext: () -> Void
     let overlay: Overlay
+    let shouldRequestATT: Bool
     
     init(
         imageName: String,
@@ -26,6 +27,7 @@ struct OnboardingContentPage<Overlay: View>: View {
         totalPages: Int,
         nextActionTitle: String,
         onNext: @escaping () -> Void,
+        shouldRequestATT: Bool = false,
         @ViewBuilder overlay: () -> Overlay = { EmptyView() }
     ) {
         self.imageName = imageName
@@ -35,6 +37,7 @@ struct OnboardingContentPage<Overlay: View>: View {
         self.totalPages = totalPages
         self.nextActionTitle = nextActionTitle
         self.onNext = onNext
+        self.shouldRequestATT = shouldRequestATT
         self.overlay = overlay()
     }
     
@@ -65,7 +68,13 @@ struct OnboardingContentPage<Overlay: View>: View {
                     }
                     .padding(.bottom, 24)
                     
-                    Button(action: onNext) {
+                    Button(action: {
+                        if shouldRequestATT {
+                            requestTrackingPermission()
+                        } else {
+                            onNext()
+                        }
+                    }) {
                         Text(nextActionTitle)
                             .font(.system(size: 17, weight: .semibold))
                             .frame(maxWidth: .infinity)
@@ -94,5 +103,13 @@ struct OnboardingContentPage<Overlay: View>: View {
         }
         .ignoresSafeArea()
     }
+    
+    private func requestTrackingPermission() {
+        ATTrackingManager.requestTrackingAuthorization { status in
+            // Независимо от ответа продолжаем онбординг
+            DispatchQueue.main.async {
+                onNext()
+            }
+        }
+    }
 }
-
