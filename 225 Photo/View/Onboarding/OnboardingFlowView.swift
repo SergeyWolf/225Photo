@@ -67,8 +67,7 @@ struct OnboardingFlowView: View {
                     totalPages: 4,
                     nextActionTitle: "Next",
                     onNext: { goNext() },
-                    shouldRequestATT: false,
-                    overlay: { RateAlertOverlayView() }
+                    shouldRequestATT: false
                 )
                 .tag(OnboardingStep.rateApp)
                 
