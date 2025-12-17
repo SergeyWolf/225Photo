@@ -273,7 +273,6 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "-25-Photo-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DreamRender Studio";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs access to your camera so you can take photos and apply effects.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The application needs access to your photos so you can select images for processing.";
@@ -314,7 +313,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "-25-Photo-Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = "DreamRender Studio";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs access to your camera so you can take photos and apply effects.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The application needs access to your photos so you can select images for processing.";
